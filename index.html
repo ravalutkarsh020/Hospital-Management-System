@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Management System - Client Side</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <h1 class="text-2xl font-bold">🏥 Hospital Management System</h1>
+      <nav class="space-x-4">
+        <a href="#home" class="text-gray-700 hover:text-gray-900 font-medium">Home</a>
+        <a href="#book" class="text-gray-700 hover:text-gray-900 font-medium">Book Appointment</a>
+        <a href="#doctors" class="text-gray-700 hover:text-gray-900 font-medium">Doctors</a>
+        <a href="#billing" class="text-gray-700 hover:text-gray-900 font-medium">Billing</a>
+        <a href="#reports" class="text-gray-700 hover:text-gray-900 font-medium">Reports</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="max-w-6xl mx-auto px-6 py-12 text-center">
+    <h2 class="text-4xl font-bold mb-4">Welcome to Our Patient Portal</h2>
+    <p class="text-gray-600 mb-8">Book appointments, view your doctors, check bills, and access your medical reports all in one place.</p>
+    <a href="#book" class="bg-gray-900 text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-800 transition">Book Now</a>
+  </section>
+
+  <!-- Book Appointment Section -->
+  <section id="book" class="max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold mb-6 text-center">Book Appointment</h2>
+    <form class="bg-white p-6 rounded-2xl shadow-md border max-w-3xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium mb-1">Patient Name</label>
+          <input type="text" placeholder="Enter your name" class="w-full border p-3 rounded-lg" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Select Doctor</label>
+          <select class="w-full border p-3 rounded-lg">
+            <option>Select Doctor</option>
+            <option>Dr. Sarah Taylor</option>
+            <option>Dr. Michael Brown</option>
+            <option>Dr. Emma Wilson</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Date</label>
+          <input type="date" class="w-full border p-3 rounded-lg" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Time</label>
+          <input type="time" class="w-full border p-3 rounded-lg" />
+        </div>
+      </div>
+      <div class="mt-6 text-center">
+        <button type="submit" class="bg-gray-900 text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition">Confirm Appointment</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Doctors Section -->
+  <section id="doctors" class="bg-white py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8 text-center">Our Doctors</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="border p-6 rounded-2xl shadow-sm text-center">
+          <h3 class="font-semibold text-lg">Dr. Sarah Taylor</h3>
+          <p class="text-gray-500">Cardiologist</p>
+        </div>
+        <div class="border p-6 rounded-2xl shadow-sm text-center">
+          <h3 class="font-semibold text-lg">Dr. Michael Brown</h3>
+          <p class="text-gray-500">General Surgeon</p>
+        </div>
+        <div class="border p-6 rounded-2xl shadow-sm text-center">
+          <h3 class="font-semibold text-lg">Dr. Emma Wilson</h3>
+          <p class="text-gray-500">Orthopedic Specialist</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Billing Section -->
+  <section id="billing" class="max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold mb-6 text-center">Billing Details</h2>
+    <div class="bg-white p-6 rounded-2xl shadow-sm border overflow-x-auto">
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="bg-gray-100 text-gray-700">
+            <th class="p-3">Invoice ID</th>
+            <th class="p-3">Patient</th>
+            <th class="p-3">Doctor</th>
+            <th class="p-3">Amount</th>
+            <th class="p-3">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b">
+            <td class="p-3">INV-1001</td>
+            <td class="p-3">John Doe</td>
+            <td class="p-3">Dr. Taylor</td>
+            <td class="p-3">₹1200</td>
+            <td class="p-3 text-green-600 font-medium">Paid</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3">INV-1002</td>
+            <td class="p-3">Riya Patel</td>
+            <td class="p-3">Dr. Brown</td>
+            <td class="p-3">₹800</td>
+            <td class="p-3 text-yellow-600 font-medium">Pending</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Reports / Analytics Section -->
+  <section id="reports" class="bg-white py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-6 text-center">Your Health Reports</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-6 border rounded-2xl shadow-sm">
+          <h3 class="font-semibold mb-2">Recent Blood Test</h3>
+          <p class="text-gray-600 text-sm mb-3">Date: 2025-10-20</p>
+          <p class="text-gray-700">Hemoglobin: 13.6 g/dL<br>Cholesterol: 180 mg/dL<br>Blood Sugar: 90 mg/dL</p>
+        </div>
+        <div class="p-6 border rounded-2xl shadow-sm">
+          <h3 class="font-semibold mb-2">Consultation Report</h3>
+          <p class="text-gray-600 text-sm mb-3">Doctor: Dr. Emma Wilson</p>
+          <p class="text-gray-700">Diagnosis: Mild Back Pain<br>Prescription: Physiotherapy, Vitamin D Supplements</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t bg-gray-100 mt-12">
+    <div class="max-w-6xl mx-auto px-6 py-4 text-center text-sm text-gray-600">
+      © 2025 Hospital Management System — All Rights Reserved
+    </div>
+  </footer>
+
+</body>
+</html>
